@@ -4,7 +4,7 @@
   http://sourcey.com
 */
 
-.highlight {
+pre {
   white-space: pre;
   overflow: auto;
   word-wrap: normal; /* horizontal scrolling */

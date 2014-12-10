@@ -2,7 +2,7 @@
   Tomorrow Pygments Theme
 */
 
-.highlight { background: #ffffff; color: #4d4d4c }
+pre { background: #ffffff; color: #4d4d4c }
 
 .hll { background-color: #d6d6d6 }
 .c { color: #8e908c } /* Comment */

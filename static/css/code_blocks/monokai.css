@@ -2,7 +2,7 @@
   Monokai Pygments Theme
 */
 
-.highlight {
+pre {
   white-space: pre;
   overflow: auto;
   word-wrap: normal; /* horizontal scrolling */
