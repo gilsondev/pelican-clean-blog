@@ -5,10 +5,12 @@
  */
 
 body {
-  font-family: 'Lora', 'Times New Roman', serif;
-  font-size: 20px;
+  font-family: 'Open Sans', 'Lora','Times New Roman',serif;
+  font-size: 18px;
+  font-weight: 300;
   color: #404040;
 }
+
 p {
   line-height: 1.5;
   margin: 30px 0;
