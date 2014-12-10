@@ -29,7 +29,11 @@
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
                         <h1>{{ article.title }}</h1>
-                        <h2 class="subheading">{{ article.summary }}</h2>
+                        {% if article.headline %}
+                            <h3 class="subheading">{{ article.headline }}</h3>
+                        {% else %}
+                            <h3 class="subheading">{{ article.summary|truncate(140) }}</h3>
+                        {% endif %}
                         <span class="meta">Posted by
                             {% for author in article.authors %}
                                 <a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
