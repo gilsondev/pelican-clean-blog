@@ -31,8 +31,6 @@
                         <h1>{{ article.title }}</h1>
                         {% if article.headline %}
                             <h3 class="subheading">{{ article.headline }}</h3>
-                        {% else %}
-                            <h3 class="subheading">{{ article.summary|truncate(140) }}</h3>
                         {% endif %}
                         <span class="meta">Posted by
                             {% for author in article.authors %}
