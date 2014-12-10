@@ -4,7 +4,7 @@
 
 {% block header %}
     <!-- Page Header -->
-    <header class="intro-header" style="background-image: url('{{ HEADER_COVER|default('static/images/home-bg.jpg') }}')">
+    <header class="intro-header" style="background-image: url('{{ HEADER_COVER|default('{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/home-bg.jpg') }}')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
