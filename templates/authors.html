@@ -1,0 +1,31 @@
+{% extends "index.html" %}
+
+{% block title %}{{ SITENAME }} - Authors{% endblock title %}
+
+{% block header %}
+    <!-- Page Header -->
+    <header class="intro-header" style="background-image: url('{{ HEADER_COVER|default('static/images/home-bg.jpg') }}')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <h1>Articles by {{ author }}</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+{% endblock header %}
+
+{% block content %}
+    {% for author, articles in authors|sort %}
+        <div class="post-preview">
+            <a href="{{ SITEURL }}/{{ author.url }}" rel="bookmark">
+                <h2 class="post-title">
+                    {{ author }} ({{ articles|count }})
+                </h2>
+            </a>
+        </div>
+        <hr>
+    {% endfor %}
+{% endblock content %}

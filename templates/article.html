@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block head %}
+    {{ super() }}
+
+    {% for keyword in article.keywords %}
+        <meta name="keywords" contents="{{keyword}}" />
+    {% endfor %}
+
+    {% for description in article.description %}
+        <meta name="description" contents="{{description}}" />
+    {% endfor %}
+
+    {% for tag in article.tags %}
+        <meta name="tags" contents="{{tag}}" />
+    {% endfor %}
+
+{% endblock %}
+
+{% block header %}
+    <!-- Page Header -->
+    <header class="intro-header" style="background-image: url('{{ article.header_cover|default('static/images/post-bg.jpg') }}')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <h1>{{ article.title }}</h1>
+                        <h2 class="subheading">{{ article.summary }}</h2>
+                        <span class="meta">Posted by
+                            {% for author in article.authors %}
+                                <a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
+                            {% endfor %}
+                             on {{ article.locale_date }}
+                        </span>
+                        {% import 'translations.html' as translations with context %}
+                        {{ translations.translations_for(article) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+{% endblock header %}
+
+{% block content %}
+    <!-- Post Content -->
+    <article>
+        {{ article.content }}
+    </article>
+
+    <hr>
+{% endblock content %}
