@@ -1,4 +1,8 @@
-pelican-medium
-==============
+Pelican Clean Blog Theme
+========================
 
-Theme based in Medium layout to pelican blogs
+Theme based in Clean Blog layout.
+
+![Screenshot](https://archive.org/download/6731240/6731240.png)
+
+Source: http://ironsummitmedia.github.io/startbootstrap-clean-blog/
