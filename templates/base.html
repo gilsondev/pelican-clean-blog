@@ -42,6 +42,13 @@
         <!-- Custom CSS -->
         <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/clean-blog.min.css" rel="stylesheet">
 
+        <!-- Code highlight color scheme -->
+        {% if COLOR_SCHEME_CSS %}
+            <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/code_blocks/{{ COLOR_SCHEME_CSS }}" rel="stylesheet">
+        {% else %}
+            <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/code_blocks/darkly.css" rel="stylesheet">
+        {% endif %}
+
         <!-- Custom Fonts -->
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
