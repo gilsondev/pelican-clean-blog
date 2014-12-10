@@ -19,7 +19,11 @@
 
 {% block header %}
     <!-- Page Header -->
-    <header class="intro-header" style="background-image: url('{{ article.header_cover|default('{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/post-bg.jpg') }}')">
+    {% if article.header_cover %}
+        <header class="intro-header" style="background-image: url('{{ article.header_cover }}')">
+    {% else %}
+        <header class="intro-header" style="background-image: url('{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/post-bg.jpg')">
+    {% endif %}
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
