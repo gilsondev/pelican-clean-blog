@@ -2,7 +2,9 @@
 
 Theme based in [Clean Blog layout](http://ironsummitmedia.github.io/startbootstrap-clean-blog/).
 
-![Screenshot](https://archive.org/download/blog_screenshot.png/blog_screenshot.png)
+## Screenshot
+
+![Screenshot](screenshot.png)
 
 ## Basic configuration
 
