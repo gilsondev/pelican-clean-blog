@@ -1,8 +1,8 @@
 # Pelican Clean Blog Theme
 
-Theme based in Clean Blog layout.
+Theme based in [Clean Blog layout](http://ironsummitmedia.github.io/startbootstrap-clean-blog/).
 
-![Screenshot](https://archive.org/download/6731240/6731240.png)
+![Screenshot](https://archive.org/download/blog_screenshot.png/blog_screenshot.png)
 
 ## Basic configuration
 
@@ -43,6 +43,14 @@ To customize, define ``COLOR_SCHEME_CSS`` in ``pelicanconf.py`` with css filenam
 ```python
 COLOR_SCHEME_CSS = 'monokai.css'
 ```
+
+### Analytics
+
+Accept many analytics:
+
+ - Google Analytics: ``GOOGLE_ANALYTICS``;
+ - Gauges: ``GAUGES`` 
+ - Piwik: ``PIWIK_URL`` and ``PIWIK_SITE_ID``.
 
 ### Articles
 
@@ -109,6 +117,4 @@ Headline: Resume of article
 
 This is the content of my super blog post.
 ```
-
-Image and Layout Source: http://ironsummitmedia.github.io/startbootstrap-clean-blog/
 
