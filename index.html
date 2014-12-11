@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Pelican Clean Blog Theme by gilsondev</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>Pelican Clean Blog Theme</h1>
+        <p>Theme based in Clean Blog layout to pelican blogs</p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/gilsondev/pelican-clean-blog" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/gilsondev/pelican-clean-blog/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/gilsondev/pelican-clean-blog/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h1>
+<a id="pelican-clean-blog-theme" class="anchor" href="#pelican-clean-blog-theme" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pelican Clean Blog Theme</h1>
+
+<p>Theme based in <a href="http://ironsummitmedia.github.io/startbootstrap-clean-blog/">Clean Blog layout</a>.</p>
+
+<p><img src="https://archive.org/download/blog_screenshot.png/blog_screenshot.png" alt="Screenshot"></p>
+
+<h2>
+<a id="basic-configuration" class="anchor" href="#basic-configuration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Basic configuration</h2>
+
+<p>All configurations about this theme.</p>
+
+<h3>
+<a id="header-covers" class="anchor" href="#header-covers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Header Covers</h3>
+
+<p>To define custom header cover, set the property <code>HEADER_COVER</code> in <code>pelicanconf.py</code>:</p>
+
+<div class="highlight highlight-python"><pre>HEADER_COVER <span class="pl-k">=</span> <span class="pl-s1"><span class="pl-pds">'</span>static/my_image.png<span class="pl-pds">'</span></span></pre></div>
+
+<h3>
+<a id="social-urls" class="anchor" href="#social-urls" aria-hidden="true"><span class="octicon octicon-link"></span></a>Social URLs</h3>
+
+<p>Github, Twitter and Facebook URLs set these properties:</p>
+
+<div class="highlight highlight-python"><pre>GITHUB_URL <span class="pl-k">=</span> <span class="pl-s1"><span class="pl-pds">'</span>http://github.com/myprofile<span class="pl-pds">'</span></span>
+TWITTER_URL <span class="pl-k">=</span> <span class="pl-s1"><span class="pl-pds">'</span>http://twitter.com/myprofile<span class="pl-pds">'</span></span>
+FACEBOOK_URL <span class="pl-k">=</span> <span class="pl-s1"><span class="pl-pds">'</span>http://facebook.com/myprofile<span class="pl-pds">'</span></span></pre></div>
+
+<p>If you have insert new links, customize <code>base.html</code>.</p>
+
+<h3>
+<a id="code-highlights" class="anchor" href="#code-highlights" aria-hidden="true"><span class="octicon octicon-link"></span></a>Code highlights</h3>
+
+<p>This theme contains this color schemes:</p>
+
+<ul>
+<li>Tomorrow - <code>tomorrow.css</code>;</li>
+<li>Tomorrow Night - <code>tomorrow_night.css</code>;</li>
+<li>Monokai - <code>monokai.css</code>;</li>
+<li>Github - <code>github.css</code>;</li>
+<li>Darkly (Default) - <code>darkly.css</code>;</li>
+</ul>
+
+<p>To customize, define <code>COLOR_SCHEME_CSS</code> in <code>pelicanconf.py</code> with css filename. Example:</p>
+
+<div class="highlight highlight-python"><pre>COLOR_SCHEME_CSS <span class="pl-k">=</span> <span class="pl-s1"><span class="pl-pds">'</span>monokai.css<span class="pl-pds">'</span></span></pre></div>
+
+<h3>
+<a id="analytics" class="anchor" href="#analytics" aria-hidden="true"><span class="octicon octicon-link"></span></a>Analytics</h3>
+
+<p>Accept many analytics:</p>
+
+<ul>
+<li>Google Analytics: <code>GOOGLE_ANALYTICS</code>;</li>
+<li>Gauges: <code>GAUGES</code> </li>
+<li>Piwik: <code>PIWIK_URL</code> and <code>PIWIK_SITE_ID</code>.</li>
+</ul>
+
+<h3>
+<a id="articles" class="anchor" href="#articles" aria-hidden="true"><span class="octicon octicon-link"></span></a>Articles</h3>
+
+<p>To customize header cover to articles, insert the metadata <code>header_cover</code>:</p>
+
+<ul>
+<li>To RST</li>
+</ul>
+
+<div class="highlight highlight-rst"><pre>My super title
+<span class="pl-mh">##############</span>
+
+<span class="pl-ent">:date:</span> 2010-10-03 10:20
+<span class="pl-ent">:modified:</span> 2010-10-04 18:40
+<span class="pl-ent">:tags:</span> thats, awesome
+<span class="pl-ent">:category:</span> yeah
+<span class="pl-ent">:slug:</span> my-super-post
+<span class="pl-ent">:authors:</span> Alexis Metaireau, Conan Doyle
+<span class="pl-ent">:summary:</span> Short version for index and feeds
+<span class="pl-ent">:header_cover:</span> /images/posts/super-title/cover.png</pre></div>
+
+<ul>
+<li>To Markdown</li>
+</ul>
+
+<div class="highlight highlight-markdown"><pre>Title: My super title
+Date: 2010-12-03 10:20
+Modified: 2010-12-05 19:30
+Category: Python
+Tags: pelican, publishing
+Slug: my-super-post
+Authors: Alexis Metaireau, Conan Doyle
+Summary: Short version for index and feeds
+Header_Cover: /images/posts/super-title/cover.png
+
+This is the content of my super blog post.</pre></div>
+
+<p>Other metada was created to assign resume of article, with <code>headline</code>:</p>
+
+<ul>
+<li>To RST</li>
+</ul>
+
+<div class="highlight highlight-rst"><pre>My super title
+<span class="pl-mh">##############</span>
+
+<span class="pl-ent">:date:</span> 2010-10-03 10:20
+<span class="pl-ent">:modified:</span> 2010-10-04 18:40
+<span class="pl-ent">:tags:</span> thats, awesome
+<span class="pl-ent">:category:</span> yeah
+<span class="pl-ent">:slug:</span> my-super-post
+<span class="pl-ent">:authors:</span> Alexis Metaireau, Conan Doyle
+<span class="pl-ent">:summary:</span> Short version for index and feeds
+<span class="pl-ent">:headline:</span> Resume of article</pre></div>
+
+<ul>
+<li>To Markdown</li>
+</ul>
+
+<div class="highlight highlight-markdown"><pre>Title: My super title
+Date: 2010-12-03 10:20
+Modified: 2010-12-05 19:30
+Category: Python
+Tags: pelican, publishing
+Slug: my-super-post
+Authors: Alexis Metaireau, Conan Doyle
+Summary: Short version for index and feeds
+Headline: Resume of article
+
+This is the content of my super blog post.</pre></div>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/gilsondev">gilsondev</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
