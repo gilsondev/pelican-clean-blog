@@ -61,6 +61,11 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
     {% endblock head %}
+
+	{% block opengraph %}
+		<meta property="og:locale" content="{{ DEFAULT_LANG }}">
+		<meta property="og:site_name" content="{{ SITENAME }}">
+	{% endblock opengraph %}
 </head>
 
 <body>

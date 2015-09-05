@@ -17,6 +17,17 @@
 
 {% endblock %}
 
+{% block opengraph %}
+	{{ super() }}
+	<meta property="og:type" content="article">
+	<meta property="article:author" content="{{ author }}">
+	<meta property="og:url" content="{{ SITEURL }}/{{ article.url }}">
+	<meta property="og:title" content="{{ article.title }}">
+	<meta property="og:description" content="{{ article.headline }}">
+	<meta property="og:image" content="{{ SITEURL }}/{{ article.header_cover }}">
+	<meta property="article:published_time" content="{{ article.date }}">
+{% endblock %}
+
 {% block header %}
     <!-- Page Header -->
     {% if article.header_cover %}
