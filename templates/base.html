@@ -9,19 +9,23 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+        <title>{% block title %}{{ SITENAME }}{% if SITESUBTITLE %} - {{ SITESUBTITLE }}{% endif %}{% endblock title %}</title>
 
-        {% if FEED_ALL_ATOM %}
-            <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
-        {% endif %}
-        {% if FEED_ALL_RSS %}
-            <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Full RSS Feed" />
-        {% endif %}
-        {% if FEED_ATOM %}
-            <link href="{{ FEED_DOMAIN }}/{{ FEED_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" />
-        {% endif %}
-        {% if FEED_RSS %}
-            <link href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
+        {% if FEEDBURNER_URL %}
+            <link href="{{ FEEDBURNER_URL }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
+        {% else %}
+            {% if FEED_ALL_ATOM %}
+                <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
+            {% endif %}
+            {% if FEED_ALL_RSS %}
+                <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Full RSS Feed" />
+            {% endif %}
+            {% if FEED_ATOM %}
+                <link href="{{ FEED_DOMAIN }}/{{ FEED_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" />
+            {% endif %}
+            {% if FEED_RSS %}
+                <link href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
+            {% endif %}
         {% endif %}
         {% if CATEGORY_FEED_ATOM and category %}
             <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_ATOM|format(category.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Categories Atom Feed" />
@@ -41,6 +45,7 @@
 
         <!-- Custom CSS -->
         <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/clean-blog.min.css" rel="stylesheet">
+        <link href="{{ SITEURL }}/override.css" rel="stylesheet">
 
         <!-- Code highlight color scheme -->
         {% if COLOR_SCHEME_CSS %}
@@ -146,8 +151,36 @@
                         {% endfor %}
                     {% endif %}
                     </ul>
-                    <p class="copyright text-muted">Blog powered by <a href="http://getpelican.com">Pelican</a>,
-                which takes great advantage of <a href="http://python.org">Python</a>.</p>
+
+
+                    <section>
+                        <p>
+                            I am a QA contractor at Red Hat responsible for over
+                            <a href="/blog/2014/02/19/7-years-1400-bugs-red-hat-qa/">1500 bugs</a>,
+                            a general purpose open source developer, Red Hat Certified professional,
+                            cloud hacker and an entrepreneur!
+                        </p>
+
+                        <p>
+                            I am living in the <a href="http://planet.sofiavalley.com">Sofia Valley</a>
+                            which is emerging as a busy place for start-up founders and tech enthusiasts
+                            in Eastern Europe! You can find more about me <a href="/blog/2013/01/25/about-me/">here</a>.
+                          </p>
+                    </section>
+
+                    <form action="http://google.com/search" method="get" style="width:300px;margin:0 auto;">
+                        <fieldset role="search">
+                            <input type="hidden" name="sitesearch" value="{{ SITEURL }}" />
+                            <input class="search" type="text" name="q" results="0" placeholder="Search" style="width:100%"/>
+                        </fieldset>
+                    </form>
+
+                    <p class="copyright text-muted">
+                        <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">CC-BY-SA</a> &amp;
+                        <a rel="license" href="http://opensource.org/licenses/MIT">MIT</a>
+                        2011-2015 &diams; Alexander Todorov &diams;
+                        <a href="http://planet.sofiavalley.com">SofiaValley Blog</a>
+                    </p>
                 </div>
             </div>
         </div>
