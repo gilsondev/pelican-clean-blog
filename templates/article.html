@@ -69,11 +69,25 @@
 
     {% if article.tags %}
         <div class="tags">
-            <p>tags: {% for tag in article.tags %}<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag | escape }}</a>, {% endfor %}</p>
+            <p>Tags: {% for tag in article.tags %}<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag | escape }}</a>, {% endfor %}</p>
         </div>
     {% endif %}
 
     <hr>
+    <div>
+        <span>
+            <small>
+                <em>
+                    Please support this blog by 
+                    <a target="_blank" href="http://www.amazon.com/ref=as_li_ss_tl?_encoding=UTF8&camp=1789&creative=390957&linkCode=ur2&tag=atodorovorg-20&linkId=L6Q34XAXQS5RDMOY">
+                    buying something from Amazon with my referral id
+                    </a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=atodorovorg-20&l=ur2&o=1" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    .
+                </em>
+            </small>
+        </span>
+    </div>
+
     {% if ADDTHIS_PUBID and article.status != "draft" %}
         <hr>
         <div class="sharing">
