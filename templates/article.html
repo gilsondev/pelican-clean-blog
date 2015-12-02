@@ -8,8 +8,14 @@
         <meta name="keywords" content="{{keyword}}" >
     {% endfor %}
 
-    {% for description in article.description %}
-        <meta name="description" content="{{description}}" >
+    {% if article.headline %}
+        <meta name="description" content="{{ article.headline }}" >
+    {% elif article.summary %}
+        <meta name="description" content="{{ article.summary|striptags|truncate(140) }}" >
+    {% endif %}
+
+    {% for author in article.authors %}
+        <meta name="author" content="{{ author }}">
     {% endfor %}
 
     {% for tag in article.tags %}
@@ -21,9 +27,11 @@
 {% block opengraph %}
 	{{ super() }}
 	<meta property="og:type" content="article" />
+<!--
         {% for author in article.authors %}
             <meta property="article:author" content="{{ author }}" />
         {% endfor %}
+-->
 	<meta property="og:url" content="{{ SITEURL }}/{{ article.url }}" />
 	<meta property="og:title" content="{{ article.title }}" />
         {% if article.headline %}
