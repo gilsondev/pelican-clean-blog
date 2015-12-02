@@ -38,8 +38,8 @@
                     <a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
                 {% endfor %}
                  on {{ article.locale_date }}
-                 {% include 'comments.html' %}
             </p>
+            {% include 'comments.html' %}
         </div>
     {% endfor %}
 
