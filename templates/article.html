@@ -21,7 +21,9 @@
 {% block opengraph %}
 	{{ super() }}
 	<meta property="og:type" content="article" />
-	<meta property="article:author" content="{{ author }}" />
+        {% for author in article.authors %}
+            <meta property="article:author" content="{{ author }}" />
+        {% endfor %}
 	<meta property="og:url" content="{{ SITEURL }}/{{ article.url }}" />
 	<meta property="og:title" content="{{ article.title }}" />
         {% if article.headline %}
