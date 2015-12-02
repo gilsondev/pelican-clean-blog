@@ -76,7 +76,9 @@
 
 	{% block opengraph %}
                 <meta property="fb:admins" content="1616937247" />
-		<meta property="og:locale" content="{{ DEFAULT_LANG }}">
+                {% for LOC in LOCALE %}
+                    <meta property="og:locale" content="{{ LOC }}">
+                {% endfor %}
 		<meta property="og:site_name" content="{{ SITENAME }}">
 	{% endblock opengraph %}
 </head>
