@@ -46,6 +46,20 @@ To customize, define ``COLOR_SCHEME_CSS`` in ``pelicanconf.py`` with css filenam
 COLOR_SCHEME_CSS = 'monokai.css'
 ```
 
+### User defined CSS
+
+Define ``CSS_OVERRIDE`` in ``pelicanconf.py`` to insert a user defined CSS file
+after theme CSS. Example:
+
+```python
+CSS_OVERRIDE = 'myblog.css'
+```
+
+### Disable theme JavaScript
+
+Set ``DISABLE_CUSTOM_THEME_JAVASCRIPT`` to True if you want to disable
+``js/clean-blog.min.js`` in case it affects forms and input fields.
+
 ### Analytics
 
 Accept many analytics:
