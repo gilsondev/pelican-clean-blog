@@ -4,7 +4,6 @@
 
 {% block header %}
     <!-- Page Header -->
-    <header class="intro-header" style="background-image: url('{{ page.header_cover|default('{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/home-bg.jpg') }}')">
     {% if page.header_cover %}
         <header class="intro-header" style="background-image: url('{{ page.header_cover }}')">
     {% elif HEADER_COVER %}
