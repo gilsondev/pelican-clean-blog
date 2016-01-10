@@ -20,12 +20,13 @@ HEADER_COVER = 'static/my_image.png'
 
 ### Social URLs
 
-Github, Twitter and Facebook URLs set these properties:
+Github, Twitter and Linkedin URLs set these properties:
 
 ```python
 GITHUB_URL = 'http://github.com/myprofile'
 TWITTER_URL = 'http://twitter.com/myprofile'
-FACEBOOK_URL = 'http://facebook.com/myprofile'
+LINKEDIN_URL = 'https://de.linkedin.com/in/myprofile'
+MAIL_ADDRESS = 'name@example.com'
 ```
 
 If you have insert new links, customize ``base.html``.
