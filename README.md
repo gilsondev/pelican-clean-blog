@@ -26,6 +26,7 @@ Github, Twitter and Linkedin URLs set these properties:
 GITHUB_URL = 'http://github.com/myprofile'
 TWITTER_URL = 'http://twitter.com/myprofile'
 LINKEDIN_URL = 'https://de.linkedin.com/in/myprofile'
+MAIL_ADDRESS = 'name@example.com'
 ```
 
 If you have insert new links, customize ``base.html``.
