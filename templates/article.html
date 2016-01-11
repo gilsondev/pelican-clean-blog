@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% block title %}{{ article.title }}{% endblock %}
 
 {% block head %}
     {{ super() }}
@@ -32,6 +33,8 @@
     <!-- Page Header -->
     {% if article.header_cover %}
         <header class="intro-header" style="background-image: url('{{ article.header_cover }}')">
+    {% elif HEADER_COVER %}
+        <header class="intro-header" style="background-image: url('{{ HEADER_COVER }}')">
     {% else %}
         <header class="intro-header" style="background-image: url('{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/post-bg.jpg')">
     {% endif %}
@@ -63,6 +66,12 @@
     <article>
         {{ article.content }}
     </article>
+
+    {% if article.tags %}
+        <div class="tags">
+            <p>tags: {% for tag in article.tags %}<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag | escape }}</a>, {% endfor %}</p>
+        </div>
+    {% endif %}
 
     <hr>
 
