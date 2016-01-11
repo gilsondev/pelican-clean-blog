@@ -133,35 +133,17 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <ul class="list-inline text-center">
-                    {% if TWITTER_URL %}
-                        <li>
-                            <a href="{{ TWITTER_URL }}">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                    {% endif %}
-                    {% if FACEBOOK_URL %}
-                        <li>
-                            <a href="{{ FACEBOOK_URL }}">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                    {% endif %}
-                    {% if GITHUB_URL %}
-                        <li>
-                            <a href="{{ GITHUB_URL }}">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
+                    {% if SOCIAL %}
+                        {% for name,link in SOCIAL %}
+                            <li>
+                                <a href="{{ link }}">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-{{ name|lower }} fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        {% endfor %}
                     {% endif %}
                     </ul>
                     <p class="copyright text-muted">Blog powered by <a href="http://getpelican.com">Pelican</a>,

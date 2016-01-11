@@ -23,12 +23,14 @@ HEADER_COVER = 'static/my_image.png'
 Github, Twitter and Facebook URLs set these properties:
 
 ```python
-GITHUB_URL = 'http://github.com/myprofile'
-TWITTER_URL = 'http://twitter.com/myprofile'
-FACEBOOK_URL = 'http://facebook.com/myprofile'
+SOCIAL = (('twitter', 'https://twitter.com/myprofile'),
+          ('github', 'https://github.com/myprofile'),
+          ('facebook','https://facebook.com/myprofile'),
+          ('flickr','https://www.flickr.com/myprofile/'),
+          ('envelope','mailto:my@mail.address'))
 ```
 
-If you have insert new links, customize ``base.html``.
+If you have new links add them to SOCIAL. The Name has to be the name of the corresponding FontAwesome icon.
 
 ### Code highlights
 
