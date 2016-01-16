@@ -52,6 +52,9 @@
                             {% endfor %}
                              on {{ article.locale_date }}
                         </span>
+                        {% if article.modified %}
+                            <span class="meta">Updated on {{ article.locale_modified }}</span>
+                        {% endif %}
                         {% import 'translations.html' as translations with context %}
                         {{ translations.translations_for(article) }}
                     </div>
