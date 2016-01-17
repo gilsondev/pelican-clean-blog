@@ -62,6 +62,17 @@ CSS_OVERRIDE = 'myblog.css'
 Set ``DISABLE_CUSTOM_THEME_JAVASCRIPT`` to True if you want to disable
 ``js/clean-blog.min.js`` in case it affects forms and input fields.
 
+### User defined footer
+
+Define ``FOOTER_INCLUDE`` in ``pelicanconf.py`` to insert a custom footer text
+instead the default "Powered by Pelican". The value is a template path. You also
+need to define the ``EXTRA_TEMPLATES_PATHS`` setting. Example:
+
+```python
+FOOTER_INCLUDE = 'myfooter.html'
+EXTRA_TEMPLATES_PATHS = [os.path.dirname(__file__)]
+```
+
 ### Analytics
 
 Accept many analytics:
