@@ -70,6 +70,11 @@ Accept many analytics:
  - Gauges: ``GAUGES`` 
  - Piwik: ``PIWIK_URL`` and ``PIWIK_SITE_ID``.
 
+### Other configuration
+
+ - Set ``SHOW_FULL_ARTICLE`` to True to show full article content on index.html
+ instead of summary;
+
 ### Articles
 
 To customize header cover to articles, insert the metadata ``header_cover``:
