@@ -85,6 +85,8 @@ Accept many analytics:
 
  - Set ``SHOW_FULL_ARTICLE`` to True to show full article content on index.html
  instead of summary;
+ - Set ``SHOW_SITESUBTITLE_IN_HTML`` to True to make use of the ``SITESUBTITLE``
+ variable inside the <title> HTML tag;
 
 ### Articles
 
