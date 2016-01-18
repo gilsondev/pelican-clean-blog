@@ -9,6 +9,10 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
+        {% if GOOGLE_SITE_VERIFICATION %}
+            <meta name="google-site-verification" content="{{ GOOGLE_SITE_VERIFICATION }}">
+        {% endif %}
+
         <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
 
         {% if FEED_ALL_ATOM %}
