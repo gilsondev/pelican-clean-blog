@@ -146,8 +146,11 @@
                         {% endfor %}
                     {% endif %}
                     </ul>
-                    <p class="copyright text-muted">Blog powered by <a href="http://getpelican.com">Pelican</a>,
-                which takes great advantage of <a href="http://python.org">Python</a>.</p>
+                    {% if FOOTER_INCLUDE %}
+                        {% include FOOTER_INCLUDE %}
+                    {% else %}
+                        {% include 'footer.html' %}
+                    {% endif %}
                 </div>
             </div>
         </div>
