@@ -73,6 +73,11 @@ FOOTER_INCLUDE = 'myfooter.html'
 EXTRA_TEMPLATES_PATHS = [os.path.dirname(__file__)]
 ```
 
+**WARNING:** avoid using names which duplicate existing templates from the
+theme directory, for example ``footer.html``. Due to how Pelican searches the
+template directories it will first find the files in the theme directory and you
+will not see the desired results.
+
 ### Analytics
 
 Accept many analytics:
@@ -83,6 +88,9 @@ Accept many analytics:
 
 ### Other configuration
 
+ - If ``ADDTHIS_PUBID`` is defined sharing buttons from AddThis will appear
+ at the bottom of the article;
+ - ``GOOGLE_SITE_VERIFICATION`` - Google site verification token;
  - Set ``SHOW_FULL_ARTICLE`` to True to show full article content on index.html
  instead of summary;
 
