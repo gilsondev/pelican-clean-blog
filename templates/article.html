@@ -18,6 +18,36 @@
 
 {% endblock %}
 
+{% block twitter_card %}
+    {% if TWITTER_HANDLE %}
+        {% if article.header_cover %}
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:image" content="{{ article.header_cover }}">
+        {% elif HEADER_COVER %}
+            <meta name="twitter:card" content="summary" />
+            <meta name="twitter:image" content="{{ HEADER_COVER }}">
+        {% else %}
+            <meta name="twitter:card" content="summary" />
+            <meta name="twitter:image" content="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/post-bg.jpg">
+        {% endif %}
+        <meta name="twitter:site" content="@{{ TWITTER_HANDLE }}" />
+        <meta name="twitter:title" content="{{ article.title }}" />
+        {% if description %}
+            <meta name="twitter:description" content="{{ description }}" />
+        {% elif article.headline %}
+            <meta name="twitter:description" content="{{ article.headline }}" />
+        {% else %}
+            <meta name="twitter:description" content="{{ article.summary }}" />
+        {% endif %}
+        {% if article.header_cover %}
+            <meta name="twitter:image" content="{{ SITEURL }}/{{ article.header_cover }}">
+        {% elif HEADER_COVER %}
+            <meta name="twitter:image" content="{{ SITEURL }}/{{ HEADER_COVER }}">
+        {% else %}
+            <meta name="twitter:image" content="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/post-bg.jpg">
+        {% endif %}
+    {% endif %}
+{% endblock %}
 {% block opengraph %}
 	{{ super() }}
 	<meta property="og:type" content="article">

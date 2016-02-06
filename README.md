@@ -86,6 +86,13 @@ Accept many analytics:
  - Gauges: ``GAUGES`` 
  - Piwik: ``PIWIK_URL`` and ``PIWIK_SITE_ID``.
 
+### Twitter cards
+
+Twitter cards are automatically generated if TWITTER_HANDLE is set: 
+```python
+TWITTER_HANDLE = "myprofile"
+```
+
 ### Other configuration
 
  - If ``ADDTHIS_PUBID`` is defined sharing buttons from AddThis will appear
