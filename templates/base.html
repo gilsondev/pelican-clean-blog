@@ -82,7 +82,11 @@
             <meta name="twitter:card" content="summary" />
             <meta name="twitter:site" content="@{{ TWITTER_HANDLE }}" />
             <meta name="twitter:title" content="{{ SITENAME }}" />
-            <meta name="twitter:description" content="View the blog." />
+            {% if SITESUBTITLE %}
+                <meta name="twitter:description" content="{{ SITESUBTITLE }}" />
+            {% else %}
+                <meta name="twitter:description" content="View the blog." />
+            {% endif %}
             {% if HEADER_COVER %}
                 <meta name="twitter:image" content="{{ SITEURL }}/{{ HEADER_COVER }}">
             {% else %}
