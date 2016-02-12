@@ -98,7 +98,11 @@ Accept many analytics:
 
 ### Articles
 
-To customize header cover to articles, insert the metadata ``header_cover``:
+To customize header cover to articles, insert the metadata ``header_cover``.
+To customize OpenGraph images, insert the metadata ``og_image``, otherwise
+``header_cover``, ``HEADER_COVER`` or a default image is used. You can also
+use absolute URLs for ``og_image``. Example:
+
 
  - To RST
 ```rst
@@ -113,6 +117,7 @@ My super title
 :authors: Alexis Metaireau, Conan Doyle
 :summary: Short version for index and feeds
 :header_cover: /images/posts/super-title/cover.png
+:og_image: /images/posts/super-title/facebook_cover.png
 ```
 
  - To Markdown
@@ -126,6 +131,7 @@ Slug: my-super-post
 Authors: Alexis Metaireau, Conan Doyle
 Summary: Short version for index and feeds
 Header_Cover: /images/posts/super-title/cover.png
+Og_Image: http://example.com/facebook_cover.png
 
 This is the content of my super blog post.
 ```
