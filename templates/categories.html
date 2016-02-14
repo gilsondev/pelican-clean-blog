@@ -6,6 +6,8 @@
     <!-- Page Header -->
     {% if HEADER_COVER %}
         <header class="intro-header" style="background-image: url('{{ HEADER_COVER }}')">
+    {% elif HEADER_COLOR %}
+        <header class="intro-header" style="background-color: {{ HEADER_COLOR }}">
     {% else %}
         <header class="intro-header" style="background-image: url('{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/home-bg.jpg')">
     {% endif %}
