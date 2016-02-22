@@ -78,6 +78,23 @@
             {% endfor %}
 		<meta property="og:site_name" content="{{ SITENAME }}">
 	{% endblock opengraph %}
+    {% block twitter_card %}
+        {% if TWITTER_HANDLE %}
+            <meta name="twitter:card" content="summary" />
+            <meta name="twitter:site" content="@{{ TWITTER_HANDLE }}" />
+            <meta name="twitter:title" content="{{ SITENAME }}" />
+            {% if SITESUBTITLE %}
+                <meta name="twitter:description" content="{{ SITESUBTITLE }}" />
+            {% else %}
+                <meta name="twitter:description" content="View the blog." />
+            {% endif %}
+            {% if HEADER_COVER %}
+                <meta name="twitter:image" content="{{ SITEURL }}/{{ HEADER_COVER }}">
+            {% else %}
+                <meta name="twitter:image" content="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/post-bg.jpg">
+            {% endif %}
+        {% endif %}
+    {% endblock twitter_card %}
 </head>
 
 <body>
