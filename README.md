@@ -46,8 +46,8 @@ If you have new links add them to SOCIAL. The Name has to be the name of the cor
 
 You can specify an external feed URL (e.g. FeedBurner) in ``SOCIAL`` using the
 ``rss`` or ``rss-square`` icons. The icon will be shown in the footer with the
-rest of your ``SOCIAL`` accounts. A <link> tag for the external feed will be
-placed in <head> instead of the default Pelican feeds.
+rest of your ``SOCIAL`` accounts. A ``<link>`` tag for the external feed will be
+placed in ``<head>`` instead of the default Pelican feeds.
 
 ### Code highlights
 
@@ -118,7 +118,7 @@ TWITTER_HANDLE = "myprofile"
  - Set ``SHOW_FULL_ARTICLE`` to True to show full article content on index.html
  instead of summary;
  - Set ``SHOW_SITESUBTITLE_IN_HTML`` to True to make use of the ``SITESUBTITLE``
- variable inside the <title> HTML tag;
+ variable inside the ``<title>`` HTML tag;
 
 ### Articles
 
