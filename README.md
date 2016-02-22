@@ -18,6 +18,16 @@ To define custom header cover, set the property ``HEADER_COVER`` in ``pelicancon
 HEADER_COVER = 'static/my_image.png'
 ```
 
+### Header Color
+
+To define a simple header background color, set the property ``HEADER_COLOR`` in ``pelicanconf.py``:
+
+```python
+HEADER_COLOR = 'black'
+```
+
+you can use any valid css color.
+
 ### Social URLs
 
 Github, Twitter and Facebook URLs set these properties:
@@ -90,12 +100,12 @@ will not see the desired results.
 Accept many analytics:
 
  - Google Analytics: ``GOOGLE_ANALYTICS``;
- - Gauges: ``GAUGES`` 
+ - Gauges: ``GAUGES``
  - Piwik: ``PIWIK_URL`` and ``PIWIK_SITE_ID``.
 
 ### Twitter cards
 
-Twitter cards are automatically generated if TWITTER_HANDLE is set: 
+Twitter cards are automatically generated if TWITTER_HANDLE is set:
 ```python
 TWITTER_HANDLE = "myprofile"
 ```
