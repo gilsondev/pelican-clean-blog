@@ -18,6 +18,16 @@ To define custom header cover, set the property ``HEADER_COVER`` in ``pelicancon
 HEADER_COVER = 'static/my_image.png'
 ```
 
+### Header Color
+
+To define a simple header background color, set the property ``HEADER_COLOR`` in ``pelicanconf.py``:
+
+```python
+HEADER_COLOR = 'black'
+```
+
+you can use any valid css color.
+
 ### Social URLs
 
 Github, Twitter and Facebook URLs set these properties:
@@ -36,8 +46,8 @@ If you have new links add them to SOCIAL. The Name has to be the name of the cor
 
 You can specify an external feed URL (e.g. FeedBurner) in ``SOCIAL`` using the
 ``rss`` or ``rss-square`` icons. The icon will be shown in the footer with the
-rest of your ``SOCIAL`` accounts. A <link> tag for the external feed will be
-placed in <head> instead of the default Pelican feeds.
+rest of your ``SOCIAL`` accounts. A ``<link>`` tag for the external feed will be
+placed in ``<head>`` instead of the default Pelican feeds.
 
 ### Code highlights
 
@@ -90,12 +100,12 @@ will not see the desired results.
 Accept many analytics:
 
  - Google Analytics: ``GOOGLE_ANALYTICS``;
- - Gauges: ``GAUGES`` 
+ - Gauges: ``GAUGES``
  - Piwik: ``PIWIK_URL`` and ``PIWIK_SITE_ID``.
 
 ### Twitter cards
 
-Twitter cards are automatically generated if TWITTER_HANDLE is set: 
+Twitter cards are automatically generated if TWITTER_HANDLE is set:
 ```python
 TWITTER_HANDLE = "myprofile"
 ```
@@ -108,7 +118,7 @@ TWITTER_HANDLE = "myprofile"
  - Set ``SHOW_FULL_ARTICLE`` to True to show full article content on index.html
  instead of summary;
  - Set ``SHOW_SITESUBTITLE_IN_HTML`` to True to make use of the ``SITESUBTITLE``
- variable inside the <title> HTML tag;
+ variable inside the ``<title>`` HTML tag;
 
 ### Articles
 
