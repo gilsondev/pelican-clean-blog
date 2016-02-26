@@ -18,6 +18,16 @@ To define custom header cover, set the property ``HEADER_COVER`` in ``pelicancon
 HEADER_COVER = 'static/my_image.png'
 ```
 
+### Header Color
+
+To define a simple header background color, set the property ``HEADER_COLOR`` in ``pelicanconf.py``:
+
+```python
+HEADER_COLOR = 'black'
+```
+
+you can use any valid css color.
+
 ### Social URLs
 
 Github, Twitter and Facebook URLs set these properties:
@@ -31,6 +41,13 @@ SOCIAL = (('twitter', 'https://twitter.com/myprofile'),
 ```
 
 If you have new links add them to SOCIAL. The Name has to be the name of the corresponding FontAwesome icon.
+
+### External feed URL
+
+You can specify an external feed URL (e.g. FeedBurner) in ``SOCIAL`` using the
+``rss`` or ``rss-square`` icons. The icon will be shown in the footer with the
+rest of your ``SOCIAL`` accounts. A ``<link>`` tag for the external feed will be
+placed in ``<head>`` instead of the default Pelican feeds.
 
 ### Code highlights
 
@@ -83,8 +100,15 @@ will not see the desired results.
 Accept many analytics:
 
  - Google Analytics: ``GOOGLE_ANALYTICS``;
- - Gauges: ``GAUGES`` 
+ - Gauges: ``GAUGES``
  - Piwik: ``PIWIK_URL`` and ``PIWIK_SITE_ID``.
+
+### Twitter cards
+
+Twitter cards are automatically generated if TWITTER_HANDLE is set:
+```python
+TWITTER_HANDLE = "myprofile"
+```
 
 ### Other configuration
 
@@ -94,11 +118,15 @@ Accept many analytics:
  - Set ``SHOW_FULL_ARTICLE`` to True to show full article content on index.html
  instead of summary;
  - Set ``SHOW_SITESUBTITLE_IN_HTML`` to True to make use of the ``SITESUBTITLE``
- variable inside the <title> HTML tag;
+ variable inside the ``<title>`` HTML tag;
 
 ### Articles
 
-To customize header cover to articles, insert the metadata ``header_cover``:
+To customize header cover to articles, insert the metadata ``header_cover``.
+To customize OpenGraph images, insert the metadata ``og_image``, otherwise
+``header_cover``, ``HEADER_COVER`` or a default image is used. You can also
+use absolute URLs for ``og_image``. Example:
+
 
  - To RST
 ```rst
@@ -113,6 +141,7 @@ My super title
 :authors: Alexis Metaireau, Conan Doyle
 :summary: Short version for index and feeds
 :header_cover: /images/posts/super-title/cover.png
+:og_image: /images/posts/super-title/facebook_cover.png
 ```
 
  - To Markdown
@@ -126,6 +155,7 @@ Slug: my-super-post
 Authors: Alexis Metaireau, Conan Doyle
 Summary: Short version for index and feeds
 Header_Cover: /images/posts/super-title/cover.png
+Og_Image: http://example.com/facebook_cover.png
 
 This is the content of my super blog post.
 ```

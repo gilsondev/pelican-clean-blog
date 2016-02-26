@@ -387,6 +387,11 @@ form .row:first-child .floating-label-form-group {
   text-shadow: none;
   background: #0085a1;
 }
+img {
+  max-width: 100%;
+  height: auto;
+  width: auto\9; /* ie8 */
+}
 img::selection {
   color: white;
   background: transparent;
