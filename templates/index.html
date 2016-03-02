@@ -39,7 +39,7 @@
             {% elif article.has_summary %}
                 {{ article.summary }}
             {% elif article.summary %}
-                {{ article.summary|truncate(140) }}
+                {{ article.summary|striptags|truncate(140) }}
             {% endif %}
             <p class="post-meta">Posted by
                 {% for author in article.authors %}
