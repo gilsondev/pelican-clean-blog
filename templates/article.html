@@ -59,7 +59,7 @@
 	{{ super() }}
 	<meta property="og:type" content="article">
         {% for author in article.authors %}
-            <meta property="article:author" content="{{ author }}" >
+            <meta property="article:author" content="{{ SITEURL }}/{{ author.url }}">
         {% endfor %}
 	<meta property="og:url" content="{{ SITEURL }}/{{ article.url }}">
 	<meta property="og:title" content="{{ article.title }}">
