@@ -26,34 +26,33 @@
 {% endblock %}
 
 {% block twitter_card %}
-    {% if TWITTER_HANDLE %}
-        {% if article.header_cover %}
-            <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:image" content="{{ article.header_cover }}">
-        {% elif HEADER_COVER %}
-            <meta name="twitter:card" content="summary" />
-            <meta name="twitter:image" content="{{ HEADER_COVER }}">
-        {% else %}
-            <meta name="twitter:card" content="summary" />
-            <meta name="twitter:image" content="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/post-bg.jpg">
-        {% endif %}
-        <meta name="twitter:site" content="@{{ TWITTER_HANDLE }}" />
-        <meta name="twitter:title" content="{{ article.title }}" />
-        {% if description %}
-            <meta name="twitter:description" content="{{ description }}" />
-        {% elif article.headline %}
-            <meta name="twitter:description" content="{{ article.headline }}" />
-        {% else %}
-            <meta name="twitter:description" content="{{ article.summary }}" />
-        {% endif %}
-        {% if article.header_cover %}
+    {% for name,link in SOCIAL if name in ['twitter'] %}
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@{{ link|replace('http://', 'https://')|replace('https://twitter.com/', '') }}">
+        <meta name="twitter:title" content="{{ article.title }}">
+
+        {% if article.twitter_image %}
+            {% if article.twitter_image|lower|truncate(4, True, '') == "http" %}
+                <meta property="twitter:image" content="{{ article.twitter_image }}">
+            {% else %}
+                <meta property="twitter:image" content="{{ SITEURL }}/{{ article.twitter_image }}">
+            {% endif %}
+        {% elif article.header_cover %}
             <meta name="twitter:image" content="{{ SITEURL }}/{{ article.header_cover }}">
         {% elif HEADER_COVER %}
             <meta name="twitter:image" content="{{ SITEURL }}/{{ HEADER_COVER }}">
         {% else %}
             <meta name="twitter:image" content="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/post-bg.jpg">
         {% endif %}
-    {% endif %}
+
+        {% if description %}
+            <meta name="twitter:description" content="{{ description }}">
+        {% elif article.headline %}
+            <meta name="twitter:description" content="{{ article.headline }}">
+        {% else %}
+            <meta name="twitter:description" content="{{ article.summary|striptags|truncate(140) }}">
+        {% endif %}
+    {% endfor %}
 {% endblock %}
 {% block opengraph %}
 	{{ super() }}
