@@ -83,10 +83,14 @@ Set ``DISABLE_CUSTOM_THEME_JAVASCRIPT`` to True if you want to disable
 
 Define ``FOOTER_INCLUDE`` in ``pelicanconf.py`` to insert a custom footer text
 instead the default "Powered by Pelican". The value is a template path. You also
-need to define the ``EXTRA_TEMPLATES_PATHS`` setting. Example:
+need to define the ``EXTRA_TEMPLATES_PATHS`` setting. If your custom footer
+template is stored under the content ``PATH`` then Pelican will try to render
+it as regular HTML page and will most likely fail. To prevent Pelican from
+trying to render your custom footer add it to ``IGNORE_FILES``. Example:
 
 ```python
 FOOTER_INCLUDE = 'myfooter.html'
+IGNORE_FILES = [FOOTER_INCLUDE]
 EXTRA_TEMPLATES_PATHS = [os.path.dirname(__file__)]
 ```
 
