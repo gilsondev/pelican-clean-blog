@@ -79,21 +79,17 @@
 		<meta property="og:site_name" content="{{ SITENAME }}">
 	{% endblock opengraph %}
     {% block twitter_card %}
-        {% if TWITTER_HANDLE %}
-            <meta name="twitter:card" content="summary" />
-            <meta name="twitter:site" content="@{{ TWITTER_HANDLE }}" />
-            <meta name="twitter:title" content="{{ SITENAME }}" />
-            {% if SITESUBTITLE %}
-                <meta name="twitter:description" content="{{ SITESUBTITLE }}" />
-            {% else %}
-                <meta name="twitter:description" content="View the blog." />
-            {% endif %}
+        {% for name,link in SOCIAL if name in ['twitter'] %}
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:site" content="@{{ link|replace('http://', 'https://')|replace('https://twitter.com/', '') }}">
+            <meta name="twitter:title" content="{{ SITENAME }}">
+            <meta name="twitter:description" content="{{ SITESUBTITLE|default('View the blog.') }}">
             {% if HEADER_COVER %}
                 <meta name="twitter:image" content="{{ SITEURL }}/{{ HEADER_COVER }}">
             {% else %}
                 <meta name="twitter:image" content="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/post-bg.jpg">
             {% endif %}
-        {% endif %}
+        {% endfor %}
     {% endblock twitter_card %}
 </head>
 

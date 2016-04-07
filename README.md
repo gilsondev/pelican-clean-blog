@@ -103,13 +103,6 @@ Accept many analytics:
  - Gauges: ``GAUGES``
  - Piwik: ``PIWIK_URL`` and ``PIWIK_SITE_ID``.
 
-### Twitter cards
-
-Twitter cards are automatically generated if TWITTER_HANDLE is set:
-```python
-TWITTER_HANDLE = "myprofile"
-```
-
 ### Other configuration
 
  - If ``ADDTHIS_PUBID`` is defined sharing buttons from AddThis will appear
@@ -122,10 +115,18 @@ TWITTER_HANDLE = "myprofile"
 
 ### Articles
 
-To customize header cover to articles, insert the metadata ``header_cover``.
-To customize OpenGraph images, insert the metadata ``og_image``, otherwise
-``header_cover``, ``HEADER_COVER`` or a default image is used. You can also
-use absolute URLs for ``og_image``. Example:
+ - To customize header cover to articles, insert the metadata ``header_cover``.
+ - To customize OpenGraph images, insert the metadata ``og_image``, otherwise
+ ``header_cover``, ``HEADER_COVER`` or a default image is used.
+ - To customize Twitter card images, insert the metadata ``twitter_image``,
+ otherwise ``header_cover``, ``HEADER_COVER`` or a default image is used.
+ Twitter cards are automatically generated if the ``twitter`` icon is configured
+ in ``SOCIAL``!
+
+All image paths are relative from the site root directory. You can also use
+absolute URLs for ``og_image`` and ``twitter_image``.
+
+Example:
 
 
  - To RST
@@ -142,6 +143,7 @@ My super title
 :summary: Short version for index and feeds
 :header_cover: /images/posts/super-title/cover.png
 :og_image: /images/posts/super-title/facebook_cover.png
+:twitter_image: /images/posts/super-title/twitter_cover.png
 ```
 
  - To Markdown
@@ -156,6 +158,7 @@ Authors: Alexis Metaireau, Conan Doyle
 Summary: Short version for index and feeds
 Header_Cover: /images/posts/super-title/cover.png
 Og_Image: http://example.com/facebook_cover.png
+Twitter_Image: http://example.com/twitter_cover.png
 
 This is the content of my super blog post.
 ```
