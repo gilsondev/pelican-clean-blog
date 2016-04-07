@@ -73,6 +73,9 @@
     {% endblock head %}
 
 	{% block opengraph %}
+            {% for admin in FACEBOOK_ADMINS %}
+                <meta property="fb:admins" content="{{ admin }}" >
+            {% endfor %}
             {% for LOC in LOCALE %}
                 <meta property="og:locale" content="{{ LOC }}">
             {% endfor %}

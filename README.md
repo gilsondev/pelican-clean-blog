@@ -112,6 +112,9 @@ Accept many analytics:
  instead of summary;
  - Set ``SHOW_SITESUBTITLE_IN_HTML`` to True to make use of the ``SITESUBTITLE``
  variable inside the ``<title>`` HTML tag;
+ - Set ``FACEBOOK_ADMINS`` to a list of Facebook account IDs which are
+ associated with this blog. For example ``['12345']``. For more info see
+ https://developers.facebook.com/docs/platforminsights/domains
 
 ### Articles
 
