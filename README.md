@@ -41,6 +41,8 @@ SOCIAL = (('twitter', 'https://twitter.com/myprofile'),
 ```
 
 If you have new links add them to SOCIAL. The Name has to be the name of the corresponding FontAwesome icon.
+If ``SHOW_SOCIAL_ON_INDEX_PAGE_HEADER`` is set to True social icons will be
+shown under site sub-title on the index page.
 
 ### External feed URL
 
