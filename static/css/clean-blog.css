@@ -44,6 +44,7 @@ blockquote {
 }
 pre {
   background-color: transparent;
+  font-size: 16px;
 }
 hr.small {
   max-width: 100px;
