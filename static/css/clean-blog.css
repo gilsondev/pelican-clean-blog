@@ -27,9 +27,12 @@ h6 {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 800;
 }
+a {
+  color: #0085a1;
+}
 a:hover,
 a:focus {
-  color: #0085a1;
+  color: #0057a2;
 }
 a img:hover,
 a img:focus {
