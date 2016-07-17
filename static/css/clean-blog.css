@@ -404,3 +404,7 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #0085a1;
 }
+.article-summary {
+  padding-top:10px;
+  padding-bottom: 10px;
+}
