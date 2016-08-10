@@ -49,10 +49,14 @@
             </a>
             {% if SHOW_FULL_ARTICLE %}
                 {{ article.content }}
-            {% elif article.has_summary %}
-                {{ article.summary }}
-            {% elif article.summary %}
-                {{ article.summary|striptags|truncate(140) }}
+            {% else %}
+                <p class="article-summary">
+                {% if article.has_summary %}
+                    {{ article.summary }}
+                {% elif article.summary %}
+                    {{ article.summary|striptags|truncate(140) }}
+                {% endif %}
+                </p>
             {% endif %}
             <p class="post-meta">Posted by
                 {% for author in article.authors %}
