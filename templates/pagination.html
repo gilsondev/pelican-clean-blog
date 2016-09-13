@@ -1,4 +1,4 @@
-{% if DEFAULT_PAGINATION %}
+{% if DEFAULT_PAGINATION and articles_paginator.num_pages > 1 %}
     <hr>
     <!-- Pager -->
     <ul class="pager">
