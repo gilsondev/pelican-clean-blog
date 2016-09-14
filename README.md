@@ -59,6 +59,7 @@ This theme contains this color schemes:
  - Tomorrow Night - ``tomorrow_night.css``;
  - Monokai - ``monokai.css``;
  - Github - ``github.css``;
+ - Github Jekyll (Gray BG Jekyll way) - ``github_jekyll.css``;
  - Darkly (Default) - ``darkly.css``;
 
 To customize, define ``COLOR_SCHEME_CSS`` in ``pelicanconf.py`` with css filename. Example:
