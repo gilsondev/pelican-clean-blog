@@ -5,7 +5,8 @@
  */
 
 body {
-  font-family: 'Open Sans', 'Lora','Times New Roman',serif;
+  font-family: Verdana, Geneva ,sans-serif;
+  /*font-family: 'Open Sans', 'Lora','Times New Roman',serif;*/
   font-size: 18px;
   font-weight: 500;
   color: #404040;
