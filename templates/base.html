@@ -94,6 +94,9 @@
             {% endif %}
         {% endfor %}
     {% endblock twitter_card %}
+    {% if FAVICON %}
+    <link rel="icon" href="/{{FAVICON}}">
+    {% endif %}
 </head>
 
 <body>
