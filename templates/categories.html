@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}{{ SITENAME }} - Categories{% endblock %}
+{% block title %}{{ SITENAME }} - {{ gettext('Categories') }}{% endblock %}
 
 {% block header %}
     <!-- Page Header -->
@@ -15,7 +15,7 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
-                        <h1>{{ SITENAME }} - Categories</h1>
+                        <h1>{{ SITENAME }} - {{ gettext('Categories') }}</h1>
                     </div>
                 </div>
             </div>
