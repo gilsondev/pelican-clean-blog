@@ -110,6 +110,7 @@
                                 <a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
                             {% endfor %}
                              on {{ article.locale_date }}
+                            <a href="{{ article.url }}"><i class="glyphicon glyphicon-link"></i></a>
                         </span>
                         {% if article.modified %}
                             <span class="meta">Updated on {{ article.locale_modified }}</span>
