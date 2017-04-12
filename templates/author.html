@@ -1,10 +1,10 @@
 {% extends "index.html" %}
 
-{% block title %}{{ SITENAME }} - Articles by {{ author }}{% endblock %}
+{% block title %}{{ SITENAME }} - {{ gettext('Articles by %(name)s', name=author) }}{% endblock %}
 
 {% block opengraph %}
     {{ super() }}
-    <meta property="og:title" content="{{ SITENAME }} - Articles by {{ author }}">
+    <meta property="og:title" content="{{ SITENAME }} - {{ gettext('Articles by %(name)s', name=author) }}">
     <meta property="og:type" content="profile">
     <meta property="profile:first_name" content="{{ author.name.split(' ')[0] }}">
     <meta property="profile:last_name" content="{{ author.name.split(' ')[1:]|join(' ') }}">
@@ -24,7 +24,7 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
-                        <h1>Articles by {{ author }}</h1>
+                        <h1>{{ gettext('Articles by %(name)s', name=author) }}</h1>
                     </div>
                 </div>
             </div>

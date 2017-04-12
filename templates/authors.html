@@ -1,6 +1,6 @@
 {% extends "index.html" %}
 
-{% block title %}{{ SITENAME }} - Authors{% endblock title %}
+{% block title %}{{ SITENAME }} - {{ gettext('Authors') }}{% endblock title %}
 
 {% block header %}
     <!-- Page Header -->
@@ -15,7 +15,7 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
-                        <h1>Articles by {{ author }}</h1>
+                        <h1>{{ gettext('Articles by %(name)s', name=author) }}</h1>
                     </div>
                 </div>
             </div>
