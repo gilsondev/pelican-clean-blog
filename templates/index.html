@@ -8,13 +8,15 @@
     {% elif HEADER_COLOR %}
         <header class="intro-header" style="background-color: {{ HEADER_COLOR }}">
     {% else %}
-        <header class="intro-header" style="background-image: url('{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/home-bg.jpg')">
+        <header class="intro-header" style="background-image: url('{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/website_motherboard_pattern.png')">
     {% endif %}
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="page-heading">
+                        {% if SHOW_SITENAME_TITLE %}
                         <h1>{{ SITENAME }}</h1>
+                        {% endif %}
                         {% if SITESUBTITLE %}
                             <hr class="small">
                             <span class="subheading">{{ SITESUBTITLE }}</span>
