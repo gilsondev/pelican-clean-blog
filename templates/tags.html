@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}{{ SITENAME }} - {{ gettext('Tags') }}{% endblock %}
+{% block title %}{{ SITENAME }} - Tags{% endblock %}
 
 {% block header %}
     <!-- Page Header -->
@@ -15,7 +15,7 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
-                        <h1>{{ SITENAME }} - {{ gettext('Tags') }}</h1>
+                        <h1>{{ SITENAME }} - Tags</h1>
                     </div>
                 </div>
             </div>
@@ -24,7 +24,7 @@
 {% endblock header %}
 
 {% block content %}
-    <h1>{{ gettext('Tags for %(sitename)s', sitename=SITENAME) }}</h1>
+    <h1>Tags for {{ SITENAME }}</h1>
     {%- for tag, articles in tags|sort %}
         <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a> ({{ articles|count }})</li>
     {% endfor %}
