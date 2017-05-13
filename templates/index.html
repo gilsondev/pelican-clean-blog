@@ -58,11 +58,11 @@
                 {% endif %}
                 </p>
             {% endif %}
-            <p class="post-meta">{{ gettext('Posted by') }}
+            <p class="post-meta">Posted by
                 {% for author in article.authors %}
                     <a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
                 {% endfor %}
-                {{ gettext('on') }} {{ article.locale_date }}
+                 on {{ article.locale_date }}
             </p>
             {% include 'comments.html' %}
         </div>
