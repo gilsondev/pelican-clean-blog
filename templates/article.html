@@ -38,7 +38,7 @@
                 <meta property="twitter:image" content="{{ SITEURL }}/{{ article.twitter_image }}">
             {% endif %}
         {% elif article.header_cover %}
-            <meta name="twitter:image" content="{{ SITEURL }}/{{ article.header_cover }}">
+            <meta name="twitter:image" content="{{ SITEURL }}{{ article.header_cover }}">
         {% elif HEADER_COVER %}
             <meta name="twitter:image" content="{{ SITEURL }}/{{ HEADER_COVER }}">
         {% else %}
@@ -78,7 +78,7 @@
                 <meta property="og:image" content="{{ SITEURL }}/{{ article.og_image }}">
             {% endif %}
         {% elif article.header_cover %}
-            <meta property="og:image" content="{{ SITEURL }}/{{ article.header_cover }}">
+            <meta property="og:image" content="{{ SITEURL }}{{ article.header_cover }}">
         {% elif HEADER_COVER %}
             <meta property="og:image" content="{{ SITEURL }}/{{ HEADER_COVER }}">
         {% else %}
