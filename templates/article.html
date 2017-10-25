@@ -89,9 +89,9 @@
 {% block header %}
     <!-- Page Header -->
     {% if article.header_cover %}
-        <header class="intro-header" style="background-image: url('{{ article.header_cover }}')">
+        <header class="intro-header" style="background-image: url('{{ SITEURL }}/{{ article.header_cover }}')">
     {% elif HEADER_COVER %}
-        <header class="intro-header" style="background-image: url('{{ HEADER_COVER }}')">
+        <header class="intro-header" style="background-image: url('{{ SITEURL }}/{{ HEADER_COVER }}')">
     {% elif HEADER_COLOR %}
         <header class="intro-header" style="background-color: {{ HEADER_COLOR }}">
     {% else %}
