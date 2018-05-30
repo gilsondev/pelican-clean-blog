@@ -99,7 +99,7 @@
     {% endif %}
 </head>
 
-<body>
+<body{% if page or article %} class="{% if page %}page-{{ page.slug }}{% endif %}{% if article %}article-{{ article.slug }}{% endif %}"{% endif %}>
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
