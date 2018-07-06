@@ -40,6 +40,13 @@
 {% endblock header %}
 
 {% block content %}
+    {% if INTRO_CONTENT %}
+        <div class="row intro-content">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                {{ INTRO_CONTENT }}
+            </div>
+        </div>
+    {% endif %}
     {% for article in articles_page.object_list %}
         <div class="post-preview">
             <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">
@@ -70,4 +77,3 @@
 
     {% include "pagination.html" %}
 {% endblock content %}
-
