@@ -2,6 +2,8 @@
 
 Theme based in [Clean Blog layout](http://ironsummitmedia.github.io/startbootstrap-clean-blog/).
 
+>:warning: This theme requires Pelican 4.0 or newer.
+
 ## Screenshot
 
 ![Screenshot](screenshot.png)
